@@ -1,9 +1,10 @@
 class CreateProfiles < ActiveRecord::Migration
   def change
     create_table :profiles do |t|
+      t.string :tagline, limit: 140
       t.integer :age, limit: 2
       t.string :location
-      t.string :about_me, limit: 255
+      t.text :about_me, limit: 255
       t.string :quirk, limit: 140
       #t.references :tags
 
