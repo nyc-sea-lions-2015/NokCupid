@@ -1,0 +1,14 @@
+<h1>Edit Your Profile Here.</h1>
+
+  <form action='/profiles/<%= @profile.id%>' method='post'>
+     <input type='hidden' name='_method' value='put' />
+
+  <input type='integer' placeholder='Age' name='age' value="<%= @profile.age %>" />
+  <input type='text' placeholder='Location' name='location' value="<%= @profile.location %>" />
+  <input type='text' placeholder='About Me' name='about_me' value="<%= @profile.about_me %>" />
+  <input type='text' placeholder='Quirk' name='quirk' value="<%= @profile.quirk %>" />
+
+    <!-- ADD TAGS HERE -->
+
+  <input type='submit' value='Update Information' />
+</form>
