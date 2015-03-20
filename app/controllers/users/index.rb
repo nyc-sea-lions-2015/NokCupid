@@ -9,9 +9,8 @@ end
 
 get '/users/:id' do
   user = User.find_by(id: params[:id])
-
-  if curr_user
-    erb :'user/show', locals: {curr_user: user}
+  if user
+    erb :'users/show', locals: {curr_user: user}
   else
     [404, 'This profile does not exist']
   end
@@ -19,7 +18,7 @@ end
 
 get '/users/:id/edit' do
   user = User.find_by(id: params[:id])
-  erb :'user/edit', locals: {curr_user: user}
+  erb :'users/edit', locals: {curr_user: user}
 end
 
 put '/users/:id/edit' do
