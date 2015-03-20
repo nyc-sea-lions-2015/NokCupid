@@ -1,0 +1,7 @@
+<h3>Below is your account information:</h3>
+  <p> Name: <%= curr_user.name %> </p>
+  <p> Email: <%= curr_user.email %> </p>
+  <p> Username: <%= curr_user.username %> </p>
+
+<a href="/users/<%=curr_user.id%>/edit">Edit</a>
+<a href="/users/<%=curr_user.id%>/delete">Delete</a>

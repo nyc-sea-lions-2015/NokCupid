@@ -1,0 +1,10 @@
+  <DT>Available matches</DT>
+  <% @users.each do |curr_user| %>
+    <dd>
+      <a href= "/users/<%=curr_user.id%>"><%= curr_user.name %></a>
+    </dd>
+  <% end %>
+  <br>
+  <br>
+  <a href="/users/new">Create your profile!</a>
+
