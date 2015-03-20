@@ -1,9 +1,9 @@
-get 'profiles/' do
+get '/profiles' do
   @profiles = Profile.all
   erb :'profiles/index'
 end
 
-get 'profiles/new' do
+get '/profiles/new' do
   erb :'profiles/new'
 end
 
@@ -14,20 +14,21 @@ get '/profiles/:id' do
 end
 
 post '/profiles' do
-  new_profile = Profile.new(age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk])
+  new_profile = Profile.new(tagline: params[:tagline], age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk])
   # figure out tags component
   new_profile.save
   redirect '/profiles/#{new_profile.id}'
 end
 
-get 'profiles/:id/edit' do
+get '/profiles/:id/edit' do
   @profile = Profile.find_by(id: params[:id])
   erb :'profiles/edit'
 end
 
-put 'profiles/:id' do
+put '/profiles/:id' do
   profile = Profile.find_by(id: params[:id])
   if profile
+    profile.tagline = params[:tagline]
     profile.age = params[:age]
     profile.location = params[:location]
     profile.about_me = params[:about_me]
