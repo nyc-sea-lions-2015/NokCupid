@@ -4,7 +4,7 @@ get '/tags' do
 end
 
 get '/tags/new' do
-  erb :'tags/new'
+   erb :'tags/new'
 end
 
 get '/tags/:id' do
@@ -42,9 +42,9 @@ put '/tags/:id' do
 end
 
 post '/tags' do
-  tag = Tag.new(name: params[:name])
-  if tag.save
-    redirect "/tags/#{tag.id}"
+  @tag = Tag.new(name: params[:name])
+  if @tag.save
+    redirect "/tags/#{@tag.id}"
   else
     [402,"You did something wrong"]
   end
