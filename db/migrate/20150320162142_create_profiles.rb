@@ -7,7 +7,6 @@ class CreateProfiles < ActiveRecord::Migration
       t.text :about_me, limit: 255
       t.string :quirk, limit: 140
       #t.references :tags
-
       t.timestamps
     end
   end
