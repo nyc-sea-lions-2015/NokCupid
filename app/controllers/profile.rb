@@ -16,7 +16,7 @@ end
 post '/profiles' do
   new_profile = Profile.new(tagline: params[:tagline], age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk])
   # figure out tags component
-  new_profile.save
+  new_profile.save!
   redirect '/profiles/#{new_profile.id}'
 end
 
