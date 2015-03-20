@@ -1,20 +1,52 @@
+get '/tags' do
+  @tags = Tag.all
+  erb :'tags/index'
+end
+
+get '/tags/new' do
+  erb :'tags/new'
+end
+
 get '/tags/:id' do
-  erb(:things, locals: {things: Profile.find(params[:id]).things})
+  @tag = Tag.find_by(id: params[:id])
+
+  if @tags/index
+    erb :'tags/show'
+  else
+    [404, 'No Tag Found']
+  end
+
 end
 
-get '/things' do
-  erb(:things, locals: {things: Thing.all.limit(25)})
+get '/tags/:id/edit' do
+  tag = Tag.find_by(id: params[:id])
+  erb :'tags/edit', locals: {cur_tag: tag}
 end
 
-get '/things/:id' do
-  erb(:thing, locals: {thing: Thing.find(params[:id])})
+put '/tags/:id' do
+  tag = tag.find_by(id: params[:id])
+
+  if tag
+    tag.name = params[:name]
+
+    if tag.save
+      redirect "/tags/#{tag.id}"
+    else
+      [500, 'something went wrong']
+    end
+
+  else
+    [404, "no tag found"]
+  end
+
 end
 
-delete '/things/:id/tags/:tag_id' do
-  thing = Thing.find(params[:id])
-  return [404, 'thing not found'] unless thing
-  tag = thing.tags.find(params[:tag_id])
-  return [400, 'no such tag'] unless tag
-  thing.tags.destroy(tag)
-  redirect back
+post '/tags' do
+  tag = Tag.new(name: params[:name])
+  if tag.save
+    redirect "/tags/#{tag.id}"
+  else
+    [402,"You did something wrong"]
+  end
+
 end
