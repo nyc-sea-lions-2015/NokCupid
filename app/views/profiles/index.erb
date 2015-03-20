@@ -1,0 +1,7 @@
+<h1 align="center">Meet Your Nemeses</h1>
+<!-- FIGURE OUT ASSOCIATION FOR INDEX PAGE AND HOW WANT TO DISPLAY -->
+  <div>
+    <% @profiles.each do |profile| %>
+     <h4><a href="/profiles/<%= profile.id %>"><%= profile.user.name %></a></h4>
+    <% end %>
+  </div>
