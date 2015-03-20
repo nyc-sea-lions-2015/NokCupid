@@ -49,7 +49,7 @@ delete '/profiles/:id' do
   @profile = Profile.find_by(id: params[:id])
   if @profile
     @profile.destroy
-    redirect '/profiles/'
+    redirect '/profiles/new' #If deleted, user will be sent to make a new one
   else
     [500, "Unable to delete."]
   end
