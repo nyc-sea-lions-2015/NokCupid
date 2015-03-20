@@ -14,25 +14,25 @@ get '/profiles/:id' do
 end
 
 post '/profiles' do
-  new_profile = Profile.new(name: params[:name], email: params[:email], age: params[:age], location: params[:location])
+  new_profile = Profile.new(age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk])
   # figure out tags component
   new_profile.save
   redirect '/profiles/#{new_profile.id}'
 end
 
 get 'profiles/:id/edit' do
-  @edit_profile = Profile.find_by(id: params[:id])
+  @profile = Profile.find_by(id: params[:id])
   erb :'profiles/edit'
 end
 
 put 'profiles/:id' do
-  @edit_profile = Profile.find_by(id: params[:id])
-  if @edit_profile
-    @edit_profile.name = params[:name]
-    @edit_profile.email = params[:email]
-    @edit_profile.age = params[:age]
-    @edit_profile.location = params[:location]
-    @edit_profile.save!
+  profile = Profile.find_by(id: params[:id])
+  if profile
+    profile.age = params[:age]
+    profile.location = params[:location]
+    profile.about_me = params[:about_me]
+    profile.quirk = params[:quirk]
+    profile.save!
     redirect "/profiles/#{@edit_profile.id}"
   else
     [404, "Sorry, this profile has not been found."]
@@ -40,14 +40,14 @@ put 'profiles/:id' do
 end
 
 get '/profiles/:id/delete' do
-  @del_profile = Profile.find_by(id: params[:id])
+  @profile = Profile.find_by(id: params[:id])
   erb :'profiles/delete'
 end
 
 delete '/profiles/:id' do
-  @del_profile = Profile.find_by(id: params[:id])
-  if @del_profile
-    del_profile.destroy
+  @profile = Profile.find_by(id: params[:id])
+  if @profile
+    @profile.destroy
     redirect '/profiles/'
   else
     [500, "Unable to delete."]
