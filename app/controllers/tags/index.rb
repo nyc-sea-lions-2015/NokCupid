@@ -43,11 +43,7 @@ put '/tags/:id' do
 end
 
 post '/tags' do
-  if params[:dislike]
-    @status = false
-  else
-    @status = true
-  end
+
   @tag = Tag.new(name: params[:name], status: @status)
   if @tag.save
     redirect back
