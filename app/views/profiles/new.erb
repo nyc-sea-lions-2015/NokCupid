@@ -1,10 +1,11 @@
 <h1 align="center">Add Profile Information</h1>
 
-  <form action="users/<%= new_user %>/profile" method="post">
+  <form action="/users/<%= new_user %>/profile" method="post">
     Age: <input type="integer" name="age"><br>
     Location: <input type="text" name="location"><br>
     About Me: <input type="text" name="about_me"><br>
     Quirk: <input type="text" name="quirk"><br>
+    Tagline: <input type="text" name="tagline"><br>
     <!-- ADD TAGS HERE -->
     <input type="submit" value="Submit Profile">
   </form>
