@@ -50,7 +50,8 @@ post '/tags' do
   end
   @tag = Tag.new(name: params[:name], status: @status)
   if @tag.save
-    redirect "/tags/#{@tag.id}"
+    redirect back
+    # "/tags/#{@tag.id}"
   else
     [402,"You did something wrong"]
   end

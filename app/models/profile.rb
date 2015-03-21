@@ -6,4 +6,6 @@ class Profile < ActiveRecord::Base
   validates :quirk, presence: true
   #validates :tag_id, presence: true
   belongs_to :user
+  has_many :mismatches
+  has_many :tags, :through => :mismatches
 end
