@@ -3,12 +3,5 @@
   <p> Email: <%= curr_user.email %> </p>
   <p> Username: <%= curr_user.username %> </p>
 
-  <h3>Profile</h3>
-  <p>Tagline: <%= curr_user.profile.tagline %></p>
-  <p>Location: <%= curr_user.profile.location %></p>
-  <p>Age: <%= curr_user.profile.age %></p>
-  <p>About Me:<%= curr_user.profile.about_me %></p>
-  <p>Quirk: <%= curr_user.profile.quirk %></p>
-
 <a href="/users/<%=curr_user.id%>/edit">Edit</a>
 <a href="/users/<%=curr_user.id%>/delete">Delete</a>
