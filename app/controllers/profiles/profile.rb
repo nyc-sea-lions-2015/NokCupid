@@ -3,21 +3,28 @@ get '/profiles' do
   erb :'profiles/index'
 end
 
-get '/profiles/new' do
-  erb :'profiles/new'
+get '/users/:id/profile/new' do
+  new_user = params[:id]
+  erb :'profiles/new', locals: {new_user: new_user}
 end
 
-get '/profiles/:id' do
-  @profile = Profile.find_by(id: params[:id])
-  erb :'/profiles/show'
-  #will show empty profile until created
+get '/users/:id/profile' do
+  curr_profile = Profile.find_by(user_id: params[:id])
+  erb :'/profiles/show', locals: {profile: curr_profile}
 end
 
-post '/profiles' do
-  new_profile = Profile.new(tagline: params[:tagline], age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk])
+post '/users/:id/profile' do
+  #create user_id for profile by passing is from user post action
+  user_id = params[:id]
+  new_profile = Profile.new(  tagline: params[:tagline],
+                              age: params[:age],
+                              location: params[:location],
+                              about_me: params[:about_me],
+                              quirk: params[:quirk],
+                              user_id: user_id)
   # figure out tags component
   new_profile.save!
-  redirect '/profiles/#{new_profile.id}'
+  redirect "/users/#{new_profile.id}/profile"
 end
 
 get '/profiles/:id/edit' do
@@ -28,11 +35,11 @@ end
 put '/profiles/:id' do
   profile = Profile.find_by(id: params[:id])
   if profile
-    profile.tagline = params[:tagline]
     profile.age = params[:age]
     profile.location = params[:location]
     profile.about_me = params[:about_me]
     profile.quirk = params[:quirk]
+    profile.tagline = params[:tagline]
     profile.save!
     redirect "/profiles/#{@edit_profile.id}"
   else

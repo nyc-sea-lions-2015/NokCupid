@@ -1,5 +1,3 @@
 get '/' do
-  "Welcome to NokCupid: Find your nemesis!"
+  erb :index
 end
-
-

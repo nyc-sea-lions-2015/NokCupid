@@ -97,169 +97,168 @@ user18 = {   name: "Tracy Teague",
             username: "spaceytracy"}
 
 
-User.create(user1)
-User.create(user2)
-User.create(user3)
-User.create(user4)
-User.create(user5)
-User.create(user6)
-User.create(user7)
-User.create(user8)
-User.create(user9)
-User.create(user10)
-User.create(user11)
-User.create(user12)
-User.create(user13)
-User.create(user14)
-User.create(user15)
-User.create(user16)
-User.create(user17)
-User.create(user18)
+User.create!(user1)
+User.create!(user2)
+User.create!(user3)
+User.create!(user4)
+User.create!(user5)
+User.create!(user6)
+User.create!(user7)
+User.create!(user8)
+User.create!(user9)
+User.create!(user10)
+User.create!(user11)
+User.create!(user12)
+User.create!(user13)
+User.create!(user14)
+User.create!(user15)
+User.create!(user16)
+User.create!(user17)
+User.create!(user18)
 
-profile1 = { user_id: 1
-             tagline: "*One-eyebrow raise*"
-             age: 25
-             location: "New York"
-             about_me: "I wear heels all of the time so you better be tall."
+profile1 = { user_id: 1,
+             tagline: "*One-eyebrow raise*",
+             age: 25,
+             location: "New York",
+             about_me: "I wear heels all of the time so you better be tall.",
              quirk: "When I see the sunlight shine through, I hear a chorus of angels."}
 
-profile2 = { user_id: 2
-             tagline: "No pressure, right?"
-             age: 24
-             location: "Long Island"
-             about_me: "Yes."
+profile2 = { user_id: 2,
+             tagline: "No pressure, right?",
+             age: 24,
+             location: "Long Island",
+             about_me: "Yes.",
              quirk: "I finger-tut when I'm thinking." }
 
-profile3 = { user_id: 3
-             tagline: "I know my calculus; it says U + ME = US."
-             age: 28
-             location: "New York"
-             about_me: "I'm a Starbucks kinda' guy, so if you like Dunkin, you're mah girl. Hit up my digits."
+profile3 = { user_id: 3,
+             tagline: "I know my calculus; it says U + ME = US.",
+             age: 28,
+             location: "New York",
+             about_me: "I'm a Starbucks kinda' guy, so if you like Dunkin, you're mah girl. Hit up my digits.",
              quirk: "I floss and mouthwash before brushing."}
 
-profile4 = { user_id: 4
-             tagline: "I'm feeling craaaayyyy! Meehh"
-             age: 25
-             location: "New Jersey"
-             about_me: "I love all shades of lipstick, not just all shades of grey. It's too real!"
+profile4 = { user_id: 4,
+             tagline: "I'm feeling craaaayyyy! Meehh",
+             age: 25,
+             location: "New Jersey",
+             about_me: "I love all shades of lipstick, not just all shades of grey. It's too real!",
              quirk: "Meowing."}
 
-profile5 = { user_id: 5
-             tagline: "Kevin 2.0"
-             age: 29
-             location: "Texas"
-             about_me: "I like ramen cat t-shirts, carrot sweatshirts, and proving Conan wrong...on hangers."
+profile5 = { user_id: 5,
+             tagline: "Kevin 2.0",
+             age: 29,
+             location: "Texas",
+             about_me: "I like ramen cat t-shirts, carrot sweatshirts, and proving Conan wrong...on hangers.",
              quirk: "All of the above." }
 
-profile6 = { user_id: 6
-             tagline: "I pick things up and put them down."
-             age: 21
-             location: "New Jersey"
-             about_me: "I have, and will, rally for cookies. And cream cheese. Let's take a stand together and do what's right."
+profile6 = { user_id: 6,
+             tagline: "I pick things up and put them down.",
+             age: 21,
+             location: "New Jersey",
+             about_me: "I have, and will, rally for cookies. And cream cheese. Let's take a stand together and do what's right.",
              quirk: "I like wearing holey socks that don't match."}
 
 
-profile7 = { user_id: 7
-             tagline: "I'm on a boooooat!"
-             age: 28
-             location: "New York"
-             about_me: "Just kidding, I'm not actually on a boat....HASHTAG Sandals and shorts in winter!"
+profile7 = { user_id: 7,
+             tagline: "I'm on a boooooat!",
+             age: 28,
+             location: "New York",
+             about_me: "Just kidding, I'm not actually on a boat....HASHTAG Sandals and shorts in winter!",
              quirk: "I think subway rats are fascinating."}
 
-profile8 = { user_id: 8
-             tagline: "You could be the Ernie to my Kurt."
-             age: 31
-             location: "New York"
-             about_me: "I may originally be from Indiana, but I'm a city boii now. Let's make some memories in this big apple."
-             quirk: "I talk to myself."
+profile8 = { user_id: 8,
+             tagline: "You could be the Ernie to my Kurt.",
+             age: 31,
+             location: "New York",
+             about_me: "I may originally be from Indiana, but I'm a city boii now. Let's make some memories in this big apple.",
+             quirk: "I talk to myself." }
 
-profile9 = { user_id: 9
-             tagline: "Catch me at three-quarters."
-             age: 30
-             location: "New York"
-             about_me: " "
+profile9 = { user_id: 9,
+             tagline: "Catch me at three-quarters.",
+             age: 30,
+             location: "New York",
+             about_me: "I like swing dancing and knitting.",
              quirk: "I like themed dances and dressing up." }
 
-profile10 = { user_id: 10
-             tagline: "Don't call me Jensen."
-             age: 23
-             location: "New York"
-             about_me: "I missed out on a full-round of Mafia and I'm still paying for it. Will you be my doctor?"
+profile10 = { user_id: 10,
+             tagline: "Don't call me Jensen.",
+             age: 23,
+             location: "New York",
+             about_me: "I missed out on a full-round of Mafia and I'm still paying for it. Will you be my doctor?",
              quirk: "I raise my eyebrows when I laugh really hard."}
 
 
-profile11 = { user_id: 11
-             tagline: "Every sentence I say is a gem."
-             age: 26
-             location: "New York"
-             about_me: "I like long walks along the ocean while sippin' on a nice, chilled Slurpee - coke and cherry swirl please!"
+profile11 = { user_id: 11,
+             tagline: "Every sentence I say is a gem.",
+             age: 26,
+             location: "New York",
+             about_me: "I like long walks along the ocean while sippin' on a nice, chilled Slurpee - coke and cherry swirl please!",
              quirk: "Wub wub wub wub wub wub...dubstep." }
 
-(natalia)
-profile12 = { user_id: 12
-             tagline: "What's your name, again?"
-             age:
-             location: "New York"
-             about_me:
-             quirk: }
+profile12 = { user_id: 12,
+             tagline: "What's your name, again?",
+             age: 32,
+             location: "New York",
+             about_me: "In Soviet Russia, database nuke you!",
+             quirk: "YOUR FACE!"}
 
-profile13 = { user_id: 13
-             tagline: "ONE MILLION."
-             age: 29
-             location: "Long Island"
-             about_me: "Not only can I repair guitars and amps, but I can repair your love life. Hit me up if you're ready for a rockin' time."
+profile13 = { user_id: 13,
+             tagline: "ONE MILLION.",
+             age: 29,
+             location: "Long Island",
+             about_me: "Not only can I repair guitars and amps, but I can repair your love life. Hit me up if you're ready for a rockin' time.",
              quirk: "I'm pretty into owls." }
 
-profile14 = { user_id: 14
-             tagline: "Will you be the trainer to my sealion?"
-             age: 27
-             location: "New York"
-             about_me: "I have a sealion costume. I'd be happy to break it out during....Yoga, you creep."
+profile14 = { user_id: 14,
+             tagline: "Will you be the trainer to my sealion?",
+             age: 27,
+             location: "New York",
+             about_me: "I have a sealion costume. I'd be happy to break it out during....Yoga, you creep.",
              quirk: "...I wear a sealion costume."}
 
-profile15 = { user_id: 15
-             tagline: "Bonus points if you're a professor."
-             age: 25
-             location: "France"
-             about_me: "I will dominate you at karaoke. Boom."
+profile15 = { user_id: 15,
+             tagline: "Bonus points if you're a professor.",
+             age: 25,
+             location: "France",
+             about_me: "I will dominate you at karaoke. Boom.",
              quirk: "Mic drop." }
 
-profile16 = { user_id: 16
-             tagline: "Dangerously cheesy."
-             age: 25
-             location: "New York"
-             about_me: "My perfect night would be watching Indiana Jones on one screen, playing Zelda on another, and sippin on some beers."
+profile16 = { user_id: 16,
+             tagline: "Dangerously cheesy.",
+             age: 25,
+             location: "New York",
+             about_me: "My perfect night would be watching Indiana Jones on one screen, playing Zelda on another, and sippin on some beers.",
              quirk: "I can turn any sentence into a song." }
 
-profile17 = { user_id: 17
-             tagline: " "
-             age: 27
-             location: "New Jersey"
-             about_me: " "
+profile17 = { user_id: 17,
+             tagline: "Let's do this!",
+             age: 27,
+             location: "New Jersey",
+             about_me: "Waddup",
              quirk: "Random, but hilarious, outbursts."}
 
-profile18 = { user_id: 18
-             tagline: "I'm just really hungry."
-             age: 25
-             location: "New York"
-             about_me: "I eat every two hours, so I hope a meal is in the plan."
-             quirk: "I claw for keys like a cat."
+profile18 = { user_id: 18,
+             tagline: "I'm just really hungry.",
+             age: 25,
+             location: "New York",
+             about_me: "I eat every two hours, so I hope a meal is in the plan.",
+             quirk: "I claw for keys like a cat." }
 
-Profile.create(profile1)
-Profile.create(profile2)
-Profile.create(profile3)
-Profile.create(profile4)
-Profile.create(profile5)
-Profile.create(profile6)
-Profile.create(profile7)
-Profile.create(profile8)
-Profile.create(profile9)
-Profile.create(profile10)
-Profile.create(profile11)
-Profile.create(profile12)
-Profile.create(profile13)
-Profile.create(profile14)
-Profile.create(profile15)
-Profile.create(profile16)
-Profile.create(profile17)
-Profile.create(profile18)
+Profile.create!(profile1)
+Profile.create!(profile2)
+Profile.create!(profile3)
+Profile.create!(profile4)
+Profile.create!(profile5)
+Profile.create!(profile6)
+Profile.create!(profile7)
+Profile.create!(profile8)
+Profile.create!(profile9)
+Profile.create!(profile10)
+Profile.create!(profile11)
+Profile.create!(profile12)
+Profile.create!(profile13)
+Profile.create!(profile14)
+Profile.create!(profile15)
+Profile.create!(profile16)
+Profile.create!(profile17)
+Profile.create!(profile18)
