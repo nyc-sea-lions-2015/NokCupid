@@ -43,7 +43,12 @@ put '/tags/:id' do
 end
 
 post '/tags' do
-  @tag = Tag.new(name: params[:name])
+  if params[:dislike]
+    @status = false
+  else
+    @status = true
+  end
+  @tag = Tag.new(name: params[:name], status: @status)
   if @tag.save
     redirect "/tags/#{@tag.id}"
   else
