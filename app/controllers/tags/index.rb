@@ -3,8 +3,9 @@ get '/tags' do
   erb :'tags/index'
 end
 
-get '/tags/new' do
-   erb :'tags/new'
+get '/users/:id/tags/new' do
+   profile_id = params[:id]
+   erb :'tags/new', locals: {profile_id: profile_id}
 end
 
 get '/tags/:id' do

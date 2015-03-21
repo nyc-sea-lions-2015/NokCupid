@@ -24,7 +24,7 @@ post '/users/:id/profile' do
                               user_id: user_id)
   # figure out tags component
   new_profile.save!
-  redirect "/users/#{new_profile.id}/profile"
+  redirect "/tags/#{new_profile.id}/new"
 end
 
 get '/profiles/:id/edit' do
