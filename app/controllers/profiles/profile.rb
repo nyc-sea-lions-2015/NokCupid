@@ -4,7 +4,8 @@ get '/profiles' do
 end
 
 get '/users/:id/profile/new' do
-  erb :'profiles/new'
+  new_user = params[:id]
+  erb :'profiles/new', locals: {new_user: new_user}
 end
 
 get '/users/:id/profile' do
