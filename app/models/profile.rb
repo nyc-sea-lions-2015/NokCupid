@@ -5,4 +5,5 @@ class Profile < ActiveRecord::Base
   validates :about_me, presence: true
   validates :quirk, presence: true
   #validates :tag_id, presence: true
+  belongs_to :user
 end
