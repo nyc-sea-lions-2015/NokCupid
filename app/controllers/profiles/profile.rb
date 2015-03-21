@@ -16,7 +16,12 @@ end
 post '/users/:id/profile' do
   #create user_id for profile by passing is from user post action
   user_id = params[:id]
-  new_profile = Profile.new(tagline: params[:tagline], age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk], user_id: user_id)
+  new_profile = Profile.new(  tagline: params[:tagline],
+                              age: params[:age],
+                              location: params[:location],
+                              about_me: params[:about_me],
+                              quirk: params[:quirk],
+                              user_id: user_id)
   # figure out tags component
   new_profile.save!
   redirect "/users/#{new_profile.id}/profile"
