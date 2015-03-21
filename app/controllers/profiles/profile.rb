@@ -3,12 +3,12 @@ get '/profiles' do
   erb :'profiles/index'
 end
 
-get '/users/:id/profiles/new' do
+get '/users/:id/profile/new' do
   erb :'profiles/new'
 end
 
 get '/users/:id/profile' do
-  @profile = Profile.find_by(id: params[:id])
+  @profile = Profile.find_by(user_id: params[:id])
   erb :'/profiles/show'
   #will show empty profile until created
 end

@@ -45,7 +45,7 @@ post '/users' do
                         username: params[:username])
 
   if new_user.save
-    redirect "/users/#{new_user.id}"
+    redirect "/users/#{new_user.id}/profile/new"
   else
     [402, "You really dun goofed when you made this profile!"]
   end
