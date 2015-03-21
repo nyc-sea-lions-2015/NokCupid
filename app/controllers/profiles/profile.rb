@@ -3,17 +3,18 @@ get '/profiles' do
   erb :'profiles/index'
 end
 
-get '/profiles/new' do
+get '/users/:id/profiles/new' do
   erb :'profiles/new'
 end
 
-get '/profiles/:id' do
+get '/users/:id/profile' do
   @profile = Profile.find_by(id: params[:id])
   erb :'/profiles/show'
   #will show empty profile until created
 end
 
-post '/profiles' do
+post '/users/:id/profile' do
+  #create user_id for profile by passing is from user post action
   new_profile = Profile.new(tagline: params[:tagline], age: params[:age], location: params[:location], about_me: params[:about_me], quirk: params[:quirk])
   # figure out tags component
   new_profile.save!
