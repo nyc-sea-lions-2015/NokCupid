@@ -26,75 +26,93 @@ end
 
 user1 = {   name: "Angel Baek",
             email: "angelb@DBC.com",
-            username: "fallingangel"}
+            username: "fallingangel",
+            password: "password1"}
 
 user2 = {   name: "Ben Cheng",
             email: "benc@DBC.com",
-            username: "chengounchained"}
+            username: "chengounchained",
+            password: "password1"}
 
 user3 = {   name: "Dan Asselin",
             email: "dana@DBC.com",
-            username: "dantheman"}
+            username: "dantheman",
+            password: "password1"}
 
 user4 = {   name: "Eveanandi Butler",
             email: "eveanb@DBC.com",
-            username: "ohnana"}
+            username: "ohnana",
+            password: "password1"}
 
 user5 = {   name: "Hoa Nguyen",
             email: "hoan@DBC.com",
-            username: "toesocks"}
+            username: "toesocks",
+            password: "password1"}
 
 user6 = {   name: "Kevin Alwell",
             email: "kevina@DBC.com",
-            username: "cookiemonster"}
+            username: "cookiemonster",
+            password: "password1"}
 
 user7 = {   name: "Kiran Chitraju",
             email: "kiranc@DBC.com",
-            username: "imonaboat"}
+            username: "imonaboat",
+            password: "password1"}
 
 user8 = {   name: "Kurt Schnelker",
             email: "kurts@DBC.com",
-            username: "saynotocarbs"}
+            username: "saynotocarbs",
+            password: "password1"}
 
 user9 = {   name: "Lauren Nicole Roth",
             email: "laurenr@DBC.com",
-            username: "misscake"}
+            username: "misscake",
+            password: "password1"}
 
 user10 = {   name: "Malcolm Bouzi",
             email: "malcolmb@DBC.com",
-            username: "malcolminthemiddle"}
+            username: "malcolminthemiddle",
+            password: "password1"}
 
 user11 = {   name: "Max Rater",
             email: "maxr@DBC.com",
-            username: "ratergator"}
+            username: "ratergator",
+            password: "password1"}
 
 user12 = {   name: "Natalia Bryzhatenko",
             email: "nataliab@DBC.com",
-            username: "nattylite"}
+            username: "nattylite",
+            password: "password1"}
 
 user13 = {   name: "Ryan Blecher",
             email: "ryanb@DBC.com",
-            username: "iamryanb"}
+            username: "iamryanb",
+            password: "password1"}
 
 user14 = {   name: "Ryan Immesberger",
             email: "ryani@DBC.com",
-            username: "sealionpuppet"}
+            username: "sealionpuppet",
+            password: "password1"}
 
 user15 = {   name: "Samantha Guergenenov",
             email: "samg@DBC.com",
-            username: "ramenfahdayz"}
+            username: "ramenfahdayz",
+            password: "password1"}
 
 user16 = {   name: "Stephanie Lo",
             email: "stephlo@DBC.com",
-            username: "lyricmaster"}
+            username: "lyricmaster",
+            password: "password1"}
 
 user17 = {   name: "Tara Frye",
             email: "taraf@DBC.com",
-            username: "burgerandfrye"}
+            username: "burgerandfrye",
+            password: "password1"}
 
 user18 = {   name: "Tracy Teague",
             email: "tracyt@DBC.com",
-            username: "spaceytracy"}
+            username: "spaceytracy",
+            password: "password1"}
 
 
 User.create!(user1)
