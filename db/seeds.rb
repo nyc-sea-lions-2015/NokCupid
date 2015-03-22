@@ -271,7 +271,7 @@ likes1.each do |like|
 end
 dislikes1.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_1.tags << new_tage
+  profile_1.tags << new_tag
 end
 
 # user2
@@ -284,7 +284,7 @@ likes2.each do |like|
 end
 dislikes2.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_2.tags << new_tage
+  profile_2.tags << new_tag
 end
 
 # user3
@@ -297,7 +297,7 @@ likes3.each do |like|
 end
 dislikes3.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_3.tags << new_tage
+  profile_3.tags << new_tag
 end
 
 # user4
@@ -310,7 +310,7 @@ likes4.each do |like|
 end
 dislikes4.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_4.tags << new_tage
+  profile_4.tags << new_tag
 end
 
 # user5
@@ -323,7 +323,7 @@ likes5.each do |like|
 end
 dislikes5.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_5.tags << new_tage
+  profile_5.tags << new_tag
 end
 
 # user6
@@ -336,7 +336,7 @@ likes6.each do |like|
 end
 dislikes6.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_6.tags << new_tage
+  profile_6.tags << new_tag
 end
 
 # user7
@@ -349,7 +349,7 @@ likes7.each do |like|
 end
 dislikes7.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_7.tags << new_tage
+  profile_7.tags << new_tag
 end
 
 # user8
@@ -362,7 +362,7 @@ likes8.each do |like|
 end
 dislikes8.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_8.tags << new_tage
+  profile_8.tags << new_tag
 end
 
 #user9
@@ -375,7 +375,7 @@ likes9.each do |like|
 end
 dislikes9.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_9.tags << new_tage
+  profile_9.tags << new_tag
 end
 
 #user10
@@ -388,7 +388,7 @@ likes10.each do |like|
 end
 dislikes10.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_10.tags << new_tage
+  profile_10.tags << new_tag
 end
 
 #user11
@@ -401,7 +401,7 @@ likes11.each do |like|
 end
 dislikes11.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_11.tags << new_tage
+  profile_11.tags << new_tag
 end
 
 #user12
@@ -414,7 +414,7 @@ likes12.each do |like|
 end
 dislikes12.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_12.tags << new_tage
+  profile_12.tags << new_tag
 end
 
 #user13
@@ -427,7 +427,7 @@ likes13.each do |like|
 end
 dislikes13.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_13.tags << new_tage
+  profile_13.tags << new_tag
 end
 
 #user14
@@ -440,7 +440,7 @@ likes14.each do |like|
 end
 dislikes14.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_14.tags << new_tage
+  profile_14.tags << new_tag
 end
 
 #user15
@@ -453,7 +453,7 @@ likes15.each do |like|
 end
 dislikes15.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_15.tags << new_tage
+  profile_15.tags << new_tag
 end
 
 #user16
@@ -466,7 +466,7 @@ likes16.each do |like|
 end
 dislikes16.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_16.tags << new_tage
+  profile_16.tags << new_tag
 end
 
 #user17
@@ -479,7 +479,7 @@ likes17.each do |like|
 end
 dislikes17.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_17.tags << new_tage
+  profile_17.tags << new_tag
 end
 
 #user18
@@ -492,5 +492,5 @@ likes18.each do |like|
 end
 dislikes18.each do |dislike|
   new_tag = Tag.create(name: dislike, status: false)
-  profile_18.tags << new_tage
+  profile_18.tags << new_tag
 end

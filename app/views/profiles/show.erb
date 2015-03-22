@@ -5,8 +5,20 @@
   <h4 align="center">About me<BR> <%= profile.about_me %></h4>
   <h4 align="center">QUIRKKK<BR> <%= profile.quirk %></h4>
   <h4 align="center">Location<BR> <%= profile.location %></h4>
-
-  <h4><%= profile.tags.last %></h4>
+  <ul>Likes
+      <% profile.tags.each do |tag|%>
+        <% if tag.status == true %>
+            <li><%= tag.name %> </li>
+        <% end %>
+      <% end %>
+  </ul>
+  <ul>Dislikes
+    <% profile.tags.each do |tag|%>
+      <% if tag.status == false %>
+          <li><%= tag.name %> </li>
+      <% end %>
+    <% end %>
+  </ul>
 <a href="/profiles/<%=profile.id%>/edit">Edit Profile</a>
 
 
