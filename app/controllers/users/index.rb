@@ -27,8 +27,14 @@ post '/users/login' do
     session[:user_id] = user.id
     redirect "/users/#{user.id}/profile"
   else
+    session[:message] = "Incorrect username and/or password!"
     redirect '/users/login'
   end
+end
+
+get '/users/logout' do
+  session[:user_id] = nil
+  redirect '/'
 end
 
 get '/users/:id/edit' do
