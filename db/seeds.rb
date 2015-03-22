@@ -265,10 +265,10 @@ profile18 = { user_id: 18,
 Profile.create(profile1)
 likes1 = ["ramen", "babies", "coding", "nacho cheese Doritos", "coffee", "Brooklyn"]
 dislikes1 = ["cheesy gordita crunch", "the word moist", "recursion"]
-likes.each do |like|
+likes1.each do |like|
   Tag.create(profile_id: 1, name: like, status: true)
 end
-dislikes.each do |dislike|
+dislikes1.each do |dislike|
   Tag.create(profile_id: 1, name: dislike, status: false)
 end
 
