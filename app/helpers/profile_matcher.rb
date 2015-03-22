@@ -6,10 +6,7 @@ module ProfileMatcher
         uncommons = match_profile.tags.where(status: false).pluck(:name) & curr_dislikes
         name = User.find_by(id: match_profile.id).username
         matches[name] = ((uncommons.length.to_f/curr_dislikes.length.to_f)*100).floor
-
     end
-
-    p matches
     return matches.sort_by{|k, v| v}.reverse
   end
 end
