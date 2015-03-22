@@ -1,6 +1,6 @@
 <h1>Add A Preference</h1>
 <p>Let the rage flow right through your fingers.</p>
-<form action='/tags' method='post'>
+<form action="/users/<%=profile_id%>/tags" method='post'>
   <input type="text" name="name" placeholder="name">
   <input type="radio" name="status" value=false>Dislike
   <input type="radio" name="status" value=true>Like

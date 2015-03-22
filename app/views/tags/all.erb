@@ -1,0 +1,21 @@
+<DT>YOUR TAGS, BITCHES.</DT>
+  <h1>Dislikes</h1>
+  <% user.tags.each do |tag| %>
+    <% if tag.status == false %>
+      <ul class="dislikes">
+        <li><%= tag.name %></li>
+      </ul>
+    <% end %>
+  <% end %>
+
+  <h1>Likes</h1>
+  <% user.tags.each do |tag| %>
+    <% if tag.status == true %>
+      <ul class="likes">
+        <li><%= tag.name %></li>
+      </ul>
+  <% end %>
+  <% end %>
+
+
+
