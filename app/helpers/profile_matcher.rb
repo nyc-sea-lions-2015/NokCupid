@@ -1,11 +1,14 @@
 module ProfileMatcher
   def self.profile_matcher(curr_user)
     matches = {}
-    curr_profile = curr_user.tags.where(status: false).pluck(:name)
+    curr_dislikes = curr_user.tags.where(status: false).pluck(:name)
     Profile.all.each do |match_profile|
-      commons = match_profile.tags.where(status: true).pluck(:name) & curr_profile
-      matches[:match_profile] = commons.length/curr_profile.length
+      unless match_profile.tags.nil?
+      uncommons = match_profile.tags.where(status: true).pluck(:name) & curr_dislikes
+      name = User.find_by(id: match_profile.id).username
+      matches[:name] = uncommons.length.to_f/curr_dislikes.length.to_f
+      end
     end
-    return matches.sort_by{|k, v| v}.reverse
+    return matches
   end
 end
