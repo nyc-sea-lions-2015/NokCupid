@@ -238,7 +238,7 @@ profile15 = { user_id: 15,
              age: 25,
              location: "France",
              about_me: "I will dominate you at karaoke. Boom.",
-             quirk: "Mic drop." ]
+             quirk: "Mic drop." }
 
 profile16 = { user_id: 16,
              tagline: "Dangerously cheesy.",
@@ -266,11 +266,11 @@ profile_1 = Profile.create(profile1)
 likes1 = ["ramen", "babies", "coding", "nacho cheese Doritos", "coffee", "Brooklyn"]
 dislikes1 = ["cheesy gordita crunch", "the word moist", "recursion"]
 likes1.each do |like|
-  new_tag = Tag.create(profile_id: 1, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_1.tags << new_tag
 end
 dislikes1.each do |dislike|
-  new_tag = Tag.create(profile_id: 1, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_1.tags << new_tage
 end
 
@@ -279,11 +279,11 @@ profile_2 = Profile.create(profile2)
 likes2 =  ["ramen", "meat-on-meat", "cheesy gordita crunch", "coding", "channeling my inner diva"]
 dislikes2 = ["recursion", "nacho cheese Doritos", "LIRR"]
 likes2.each do |like|
-  new_tag = Tag.create(profile_id: 2, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_2.tags << new_tag
 end
 dislikes2.each do |dislike|
-  new_tag = Tag.create(profile_id: 2, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_2.tags << new_tage
 end
 
@@ -292,11 +292,11 @@ profile_3 = Profile.create(profile3)
 likes3 = ["babies", "coding", "nacho cheese Doritos", "Starbucks", "coffee"]
 dislikes3 = ["recursion", "edible fermentation", "Brooklyn"]
 likes3.each do |like|
-  new_tag = Tag.create(profile_id: 3, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_3.tags << new_tag
 end
 dislikes3.each do |dislike|
-  new_tag = Tag.create(profile_id: 3, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_3.tags << new_tage
 end
 
@@ -305,11 +305,11 @@ profile_4 = Profile.create(profile4)
 likes4 = ["Binya,  Binya, pollywog", "social media", "coding", "nacho cheese Doritos", "channeling my inner diva", "Fantasy by Ludacris", "karaoke"]
 dislikes4 = ["sidewalk spits", "corny jokes", "the word moist", "recursion", "cool ranch Doritos", "being normal"]
 likes4.each do |like|
-  new_tag = Tag.create(profile_id: 4, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_4.tags << new_tag
 end
 dislikes4.each do |dislike|
-  new_tag = Tag.create(profile_id: 4, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_4.tags << new_tage
 end
 
@@ -318,11 +318,11 @@ profile_5 = Profile.create(profile5)
 likes5 = ["ramen cats", "corny jokes", "the word moist", "original meat", "recursion", "cool ranch Doritos", "Cheetos, crunchy"]
 dislikes5 = ["Binya,  Binya, pollywog", "social media", "coding", "nacho cheese Doritos", "channeling my inner diva", "Fantasy by Ludacris", "karaoke"]
 likes5.each do |like|
-  new_tag = Tag.create(profile_id: 5, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_5.tags << new_tag
 end
 dislikes5.each do |dislike|
-  new_tag = Tag.create(profile_id: 5, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_5.tags << new_tage
 end
 
@@ -331,11 +331,11 @@ profile_6 = Profile.create(profile6)
 likes6 = ["meat-on-meat", "cheesy gordita crunch", "cookie Friday", "coding", "karaoke"]
 dislikes6 = ["sidewalk spits", "original meat", "recursion", "edible fermentation", "traveling"]
 likes6.each do |like|
-  new_tag = Tag.create(profile_id: 6, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_6.tags << new_tag
 end
 dislikes6.each do |dislike|
-  new_tag = Tag.create(profile_id: 6, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_6.tags << new_tage
 end
 
@@ -344,11 +344,11 @@ profile_7 = Profile.create(profile7)
 likes7 = ["babies", "original meat", "recursion", "coding"]
 dislikes7 = ["meat-on-meat", "food in beards", "being normal", "karaoke"]
 likes7.each do |like|
-  new_tag = Tag.create(profile_id: 7, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_7.tags << new_tag
 end
 dislikes7.each do |dislike|
-  new_tag = Tag.create(profile_id: 7, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_7.tags << new_tage
 end
 
@@ -357,11 +357,11 @@ profile_8 = Profile.create(profile8)
 likes8 = ["meat-on-meat", "coding", "edible fermentation", "channeling my inner diva"]
 dislikes8 = ["babies", "cheesy gordita crunch", "recursion", "carbs", "cake"]
 likes8.each do |like|
-  new_tag = Tag.create(profile_id: 8, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_8.tags << new_tag
 end
 dislikes8.each do |dislike|
-  new_tag = Tag.create(profile_id: 8, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_8.tags << new_tage
 end
 
@@ -370,11 +370,11 @@ profile_9 = Profile.create!(profile9)
 likes9 = ["Binya,  Binya, pollywog", "recursion", "coding", "cake", "dancing"]
 dislikes9 = ["sidewalk spits", "cheesy gordita crunch", "being normal"]
 likes9.each do |like|
-  new_tag = Tag.create(profile_id: 9, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_9.tags << new_tag
 end
 dislikes9.each do |dislike|
-  new_tag = Tag.create(profile_id: 9, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_9.tags << new_tage
 end
 
@@ -383,11 +383,11 @@ profile_10 = Profile.create!(profile10)
 likes10 = ["meat-on-meat", "babies", "recursion", "coding", "traveling"]
 dislikes10 = ["channeling my inner diva", "dancing", "coffee", "Brooklyn"]
 likes10.each do |like|
-  new_tag = Tag.create(profile_id: 10, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_10.tags << new_tag
 end
 dislikes10.each do |dislike|
-  new_tag = Tag.create(profile_id: 10, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_10.tags << new_tage
 end
 
@@ -396,11 +396,11 @@ profile_11 = Profile.create!(profile11)
 likes11 = ["sidewalk spits", "cheesy gordita crunch", "the word moist", "coding", "dancing"]
 dislikes11 = ["Binya,  Binya, pollywog", "recursion", "coffee"]
 likes11.each do |like|
-  new_tag = Tag.create(profile_id: 11, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_11.tags << new_tag
 end
 dislikes11.each do |dislike|
-  new_tag = Tag.create(profile_id: 11, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_11.tags << new_tage
 end
 
@@ -409,11 +409,11 @@ profile_12 = Profile.create!(profile12)
 likes12 = ["Binya,  Binya, pollywog", "coding", "traveling", "Americans"]
 dislikes12 = ["cheesy gordita crunch", "the word moist", "dancing"]
 likes12.each do |like|
-  new_tag = Tag.create(profile_id: 12, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_12.tags << new_tag
 end
 dislikes12.each do |dislike|
-  new_tag = Tag.create(profile_id: 12, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_12.tags << new_tage
 end
 
@@ -422,11 +422,11 @@ profile_13 = Profile.create!(profile13)
 likes13 = ["sidewalk spits", "Binya,  Binya, pollywog", "cheesy gordita crunch", "coding", "Cheetos, puffed", "dancing", "coffee"]
 dislikes13 = ["the word moist", "Cheetos, crunchy", "food in beards", "LIRR"]
 likes13.each do |like|
-  new_tag = Tag.create(profile_id: 13, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_13.tags << new_tag
 end
 dislikes13.each do |dislike|
-  new_tag = Tag.create(profile_id: 13, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_13.tags << new_tage
 end
 
@@ -435,11 +435,11 @@ profile_14 = Profile.create!(profile14)
 dislikes14 = ["Binya,  Binya, pollywog", "cheesy gordita crunch", "sidewalk spits", "Cheetos, crunchy", "dancing"]
 likes14 = ["coding", "the word moist", "Cheetos, puffed", "LIRR"]
 likes14.each do |like|
-  new_tag = Tag.create(profile_id: 14, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_14.tags << new_tag
 end
 dislikes14.each do |dislike|
-  new_tag = Tag.create(profile_id: 14, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_14.tags << new_tage
 end
 
@@ -448,11 +448,11 @@ profile_15 = Profile.create!(profile15)
 likes15 = ["ramen", "karaoke", "coding", "traveling", "dancing", "professors"]
 dislikes15 = ["Binya,  Binya, pollywog", "Americans", "Brooklyn"]
 likes15.each do |like|
-  new_tag = Tag.create(profile_id: 15, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_15.tags << new_tag
 end
 dislikes15.each do |dislike|
-  new_tag = Tag.create(profile_id: 15, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_15.tags << new_tage
 end
 
@@ -461,11 +461,11 @@ profile_16 = Profile.create!(profile16)
 likes16 = ["corny jokes", "meat-on-meat", "Binya,  Binya, pollywog", "coding", "Cheetos, puffed", "cool ranch Doritos", "hula-hooping", "traveling", "karaoke"]
 dislikes16 = ["the word moist", "people", "coffee", "channeling my inner diva"]
 likes16.each do |like|
-  new_tag = Tag.create(profile_id: 16, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_16.tags << new_tag
 end
 dislikes16.each do |dislike|
-  new_tag = Tag.create(profile_id: 16, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_16.tags << new_tage
 end
 
@@ -474,11 +474,11 @@ profile_17 = Profile.create!(profile17)
 likes17 = ["Binya,  Binya, pollywog", "babies", "recursion", "coding", "channeling my inner diva", "dancing", "food in beards"]
 dislikes17 = ["the word moist", "edible fermentation", "coffee"]
 likes17.each do |like|
-  new_tag = Tag.create(profile_id: 17, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_17.tags << new_tag
 end
 dislikes17.each do |dislike|
-  new_tag = Tag.create(profile_id: 17, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_17.tags << new_tage
 end
 
@@ -487,10 +487,10 @@ profile_18 = Profile.create!(profile18)
 likes18 = ["corny jokes", "Binya,  Binya, pollywog", "original meat", "coding", "carbs", "Starbucks", "traveling"]
 dislikes18 = ["meat-on-meat", "babies", "the word moist", "recursion"]
 likes18.each do |like|
-  new_tag = Tag.create(profile_id: 18, name: like, status: true)
+  new_tag = Tag.create(name: like, status: true)
   profile_18.tags << new_tag
 end
 dislikes18.each do |dislike|
-  new_tag = Tag.create(profile_id: 18, name: dislike, status: false)
+  new_tag = Tag.create(name: dislike, status: false)
   profile_18.tags << new_tage
 end

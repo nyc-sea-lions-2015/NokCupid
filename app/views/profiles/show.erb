@@ -1,13 +1,13 @@
 <div class="profiles">
 <!--   Figure out associations-->
-  <h4 align="center">Age: <%= profile.age %></h4>
-  <h4 align="center">Tagline: <%= profile.tagline %></h4>
-  <h4 align="center">About me: <%= profile.about_me %></h4>
-  <h4 align="center">QUIRKKK: <%= profile.quirk %></h4>
-  <h4 align="center">Location: <%= profile.location %></h4>
+  <h4 align="center">Age<BR> <%= profile.age %></h4>
+  <h4 align="center">Tagline<BR> <%= profile.tagline %></h4>
+  <h4 align="center">About me<BR> <%= profile.about_me %></h4>
+  <h4 align="center">QUIRKKK<BR> <%= profile.quirk %></h4>
+  <h4 align="center">Location<BR> <%= profile.location %></h4>
 
-  <!-- <a href="/profiles</<%# profiles.id%>/edit">Edit Profile</a>
- -->
+  <h4><%= profile.tags.last %></h4>
+<a href="/profiles/<%=profile.id%>/edit">Edit Profile</a>
 
 
 </div>
