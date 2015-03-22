@@ -1,0 +1,22 @@
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: transparent !important;
+}
+
+.right-justify {
+    text-align: right;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.prof_edit_button {
+    padding-top: 60px;
+}
