@@ -14,15 +14,15 @@
 # User.create(user2)
 # User.create(user3)
 
-['Dogs', 'Cats', 'Surfing', 'Knitting', 'Bowling', 'Dancing', 'Hip Hop',
-'Card Games', 'Cinema', 'Cooking', 'Darts', 'Gardening', 'Chess', 'Videogames',
-'Sudoku', 'Crossword Puzzles', 'Pizza', 'Dessert', 'Hula Hooping', 'Yoga',
-'Making Memories', 'Rainbows', 'Camping', 'Pool', 'Reading', 'TV', 'Traveling',
-'Republicans', 'Democrats', 'Protestants', 'Catholics', 'Scientology', 'Family',
-'Concerts', 'Shopping', 'Reality TV', 'Tattoos', 'Tennis', 'Golf', 'Museums',
-'Jokes', 'Snowboarding', 'Bars', 'Whisky', 'Beer', 'Chocolate', 'Fun'].each do |interest|
-  Tag.create(name: interest)
-end
+# ['Dogs', 'Cats', 'Surfing', 'Knitting', 'Bowling', 'Dancing', 'Hip Hop',
+# 'Card Games', 'Cinema', 'Cooking', 'Darts', 'Gardening', 'Chess', 'Videogames',
+# 'Sudoku', 'Crossword Puzzles', 'Pizza', 'Dessert', 'Hula Hooping', 'Yoga',
+# 'Making Memories', 'Rainbows', 'Camping', 'Pool', 'Reading', 'TV', 'Traveling',
+# 'Republicans', 'Democrats', 'Protestants', 'Catholics', 'Scientology', 'Family',
+# 'Concerts', 'Shopping', 'Reality TV', 'Tattoos', 'Tennis', 'Golf', 'Museums',
+# 'Jokes', 'Snowboarding', 'Bars', 'Whisky', 'Beer', 'Chocolate', 'Fun'].each do |interest|
+#   Tag.create(name: interest)
+# end
 
 user1 = {   name: "Angel Baek",
             email: "angelb@DBC.com",
@@ -205,7 +205,6 @@ profile10 = { user_id: 10,
              about_me: "I missed out on a full-round of Mafia and I'm still paying for it. Will you be my doctor?",
              quirk: "I raise my eyebrows when I laugh really hard."}
 
-
 profile11 = { user_id: 11,
              tagline: "Every sentence I say is a gem.",
              age: 26,
@@ -262,21 +261,236 @@ profile18 = { user_id: 18,
              about_me: "I eat every two hours, so I hope a meal is in the plan.",
              quirk: "I claw for keys like a cat." }
 
-Profile.create!(profile1)
-Profile.create!(profile2)
-Profile.create!(profile3)
-Profile.create!(profile4)
-Profile.create!(profile5)
-Profile.create!(profile6)
-Profile.create!(profile7)
-Profile.create!(profile8)
-Profile.create!(profile9)
-Profile.create!(profile10)
-Profile.create!(profile11)
-Profile.create!(profile12)
-Profile.create!(profile13)
-Profile.create!(profile14)
-Profile.create!(profile15)
-Profile.create!(profile16)
-Profile.create!(profile17)
-Profile.create!(profile18)
+# user1
+profile_1 = Profile.create(profile1)
+likes1 = ["ramen", "babies", "coding", "nacho cheese Doritos", "coffee", "Brooklyn"]
+dislikes1 = ["cheesy gordita crunch", "the word moist", "recursion"]
+likes1.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_1.tags << new_tag
+end
+dislikes1.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_1.tags << new_tag
+end
+
+# user2
+profile_2 = Profile.create(profile2)
+likes2 =  ["ramen", "meat-on-meat", "cheesy gordita crunch", "coding", "channeling my inner diva"]
+dislikes2 = ["recursion", "nacho cheese Doritos", "LIRR"]
+likes2.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_2.tags << new_tag
+end
+dislikes2.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_2.tags << new_tag
+end
+
+# user3
+profile_3 = Profile.create(profile3)
+likes3 = ["babies", "coding", "nacho cheese Doritos", "Starbucks", "coffee"]
+dislikes3 = ["recursion", "edible fermentation", "Brooklyn"]
+likes3.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_3.tags << new_tag
+end
+dislikes3.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_3.tags << new_tag
+end
+
+# user4
+profile_4 = Profile.create(profile4)
+likes4 = ["Binya,  Binya, pollywog", "social media", "coding", "nacho cheese Doritos", "channeling my inner diva", "Fantasy by Ludacris", "karaoke"]
+dislikes4 = ["sidewalk spits", "corny jokes", "the word moist", "recursion", "cool ranch Doritos", "being normal"]
+likes4.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_4.tags << new_tag
+end
+dislikes4.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_4.tags << new_tag
+end
+
+# user5
+profile_5 = Profile.create(profile5)
+likes5 = ["ramen cats", "corny jokes", "the word moist", "original meat", "recursion", "cool ranch Doritos", "Cheetos, crunchy"]
+dislikes5 = ["Binya,  Binya, pollywog", "social media", "coding", "nacho cheese Doritos", "channeling my inner diva", "Fantasy by Ludacris", "karaoke"]
+likes5.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_5.tags << new_tag
+end
+dislikes5.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_5.tags << new_tag
+end
+
+# user6
+profile_6 = Profile.create(profile6)
+likes6 = ["meat-on-meat", "cheesy gordita crunch", "cookie Friday", "coding", "karaoke"]
+dislikes6 = ["sidewalk spits", "original meat", "recursion", "edible fermentation", "traveling"]
+likes6.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_6.tags << new_tag
+end
+dislikes6.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_6.tags << new_tag
+end
+
+# user7
+profile_7 = Profile.create(profile7)
+likes7 = ["babies", "original meat", "recursion", "coding"]
+dislikes7 = ["meat-on-meat", "food in beards", "being normal", "karaoke"]
+likes7.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_7.tags << new_tag
+end
+dislikes7.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_7.tags << new_tag
+end
+
+# user8
+profile_8 = Profile.create(profile8)
+likes8 = ["meat-on-meat", "coding", "edible fermentation", "channeling my inner diva"]
+dislikes8 = ["babies", "cheesy gordita crunch", "recursion", "carbs", "cake"]
+likes8.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_8.tags << new_tag
+end
+dislikes8.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_8.tags << new_tag
+end
+
+#user9
+profile_9 = Profile.create!(profile9)
+likes9 = ["Binya,  Binya, pollywog", "recursion", "coding", "cake", "dancing"]
+dislikes9 = ["sidewalk spits", "cheesy gordita crunch", "being normal"]
+likes9.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_9.tags << new_tag
+end
+dislikes9.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_9.tags << new_tag
+end
+
+#user10
+profile_10 = Profile.create!(profile10)
+likes10 = ["meat-on-meat", "babies", "recursion", "coding", "traveling"]
+dislikes10 = ["channeling my inner diva", "dancing", "coffee", "Brooklyn"]
+likes10.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_10.tags << new_tag
+end
+dislikes10.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_10.tags << new_tag
+end
+
+#user11
+profile_11 = Profile.create!(profile11)
+likes11 = ["sidewalk spits", "cheesy gordita crunch", "the word moist", "coding", "dancing"]
+dislikes11 = ["Binya,  Binya, pollywog", "recursion", "coffee"]
+likes11.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_11.tags << new_tag
+end
+dislikes11.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_11.tags << new_tag
+end
+
+#user12
+profile_12 = Profile.create!(profile12)
+likes12 = ["Binya,  Binya, pollywog", "coding", "traveling", "Americans"]
+dislikes12 = ["cheesy gordita crunch", "the word moist", "dancing"]
+likes12.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_12.tags << new_tag
+end
+dislikes12.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_12.tags << new_tag
+end
+
+#user13
+profile_13 = Profile.create!(profile13)
+likes13 = ["sidewalk spits", "Binya,  Binya, pollywog", "cheesy gordita crunch", "coding", "Cheetos, puffed", "dancing", "coffee"]
+dislikes13 = ["the word moist", "Cheetos, crunchy", "food in beards", "LIRR"]
+likes13.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_13.tags << new_tag
+end
+dislikes13.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_13.tags << new_tag
+end
+
+#user14
+profile_14 = Profile.create!(profile14)
+dislikes14 = ["Binya,  Binya, pollywog", "cheesy gordita crunch", "sidewalk spits", "Cheetos, crunchy", "dancing"]
+likes14 = ["coding", "the word moist", "Cheetos, puffed", "LIRR"]
+likes14.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_14.tags << new_tag
+end
+dislikes14.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_14.tags << new_tag
+end
+
+#user15
+profile_15 = Profile.create!(profile15)
+likes15 = ["ramen", "karaoke", "coding", "traveling", "dancing", "professors"]
+dislikes15 = ["Binya,  Binya, pollywog", "Americans", "Brooklyn"]
+likes15.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_15.tags << new_tag
+end
+dislikes15.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_15.tags << new_tag
+end
+
+#user16
+profile_16 = Profile.create!(profile16)
+likes16 = ["corny jokes", "meat-on-meat", "Binya,  Binya, pollywog", "coding", "Cheetos, puffed", "cool ranch Doritos", "hula-hooping", "traveling", "karaoke"]
+dislikes16 = ["the word moist", "people", "coffee", "channeling my inner diva"]
+likes16.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_16.tags << new_tag
+end
+dislikes16.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_16.tags << new_tag
+end
+
+#user17
+profile_17 = Profile.create!(profile17)
+likes17 = ["Binya,  Binya, pollywog", "babies", "recursion", "coding", "channeling my inner diva", "dancing", "food in beards"]
+dislikes17 = ["the word moist", "edible fermentation", "coffee"]
+likes17.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_17.tags << new_tag
+end
+dislikes17.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_17.tags << new_tag
+end
+
+#user18
+profile_18 = Profile.create!(profile18)
+likes18 = ["corny jokes", "Binya,  Binya, pollywog", "original meat", "coding", "carbs", "Starbucks", "traveling"]
+dislikes18 = ["meat-on-meat", "babies", "the word moist", "recursion"]
+likes18.each do |like|
+  new_tag = Tag.create(name: like, status: true)
+  profile_18.tags << new_tag
+end
+dislikes18.each do |dislike|
+  new_tag = Tag.create(name: dislike, status: false)
+  profile_18.tags << new_tag
+end

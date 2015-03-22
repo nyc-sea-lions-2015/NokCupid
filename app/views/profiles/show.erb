@@ -56,6 +56,21 @@
                             </div>
                         </li>
                     </ul>
+                    <ul>Likes
+                      <% profile.tags.each do |tag|%>
+                        <% if tag.status == true %>
+                            <li><%= tag.name.capitalize %> </li>
+                        <% end %>
+                      <% end %>
+                  </ul>
+                  <ul>Dislikes
+                    <% profile.tags.each do |tag|%>
+                      <% if tag.status == false %>
+                          <li><%= tag.name.capitalize %> </li>
+                      <% end %>
+                    <% end %>
+                  </ul>
+                  <button class="btn"><a href="/profiles/<%=profile.id%>/edit">Edit Profile</a></button>
                 </div>
             </div>
         </div>

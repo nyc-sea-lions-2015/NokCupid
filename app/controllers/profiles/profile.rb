@@ -9,8 +9,9 @@ get '/users/:id/profile/new' do
 end
 
 get '/users/:id/profile' do
+  user = User.find_by(id: params[:id])
   curr_profile = Profile.find_by(user_id: params[:id])
-  erb :'/profiles/show', locals: {profile: curr_profile}
+  erb :'/profiles/show', locals: {profile: curr_profile, user: user}
 end
 
 post '/users/:id/profile' do
