@@ -1,5 +1,6 @@
 <div class="profiles">
 <!--   Figure out associations-->
+  <h2><%= user.username %></h2>
   <h4 align="center">Age<BR> <%= profile.age %></h4>
   <h4 align="center">Tagline<BR> <%= profile.tagline %></h4>
   <h4 align="center">About me<BR> <%= profile.about_me %></h4>
@@ -8,14 +9,14 @@
   <ul>Likes
       <% profile.tags.each do |tag|%>
         <% if tag.status == true %>
-            <li><%= tag.name %> </li>
+            <li><%= tag.name.capitalize %> </li>
         <% end %>
       <% end %>
   </ul>
   <ul>Dislikes
     <% profile.tags.each do |tag|%>
       <% if tag.status == false %>
-          <li><%= tag.name %> </li>
+          <li><%= tag.name.capitalize %> </li>
       <% end %>
     <% end %>
   </ul>
