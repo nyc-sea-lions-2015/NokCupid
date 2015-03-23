@@ -1,7 +1,21 @@
-<% list.each do |username, percent| %>
-<ul>
-<li><%= percent %>
-<%= username %></li>
-</ul>
-<br>
-<% end %>
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Your matches!...or mismatches ^_~</h2>
+          </div>
+            <div class="row">
+                <% list.each do |username, percent| %>
+                  <% user = User.find_by(username: username) %>
+                  <ul>
+                  <li>
+                  <a href="/users/<%= user.id %>/profile"><%=username%></a></li>
+                  <%= percent %>% Match
+                  </ul>
+                  <br>
+                  <% end %>
+            </div>
+        </div>
+    </section>
