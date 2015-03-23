@@ -45,6 +45,10 @@ end
 put '/users/:id/edit' do
   curr_user = User.find_by(id: params[:id])
 
+  #ZM: Nesting Hell
+  #
+  #return [404,''] unless curr_user
+
   if curr_user
     curr_user.name = params[:name]
     curr_user.email = params[:email]

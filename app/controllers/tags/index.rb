@@ -52,6 +52,10 @@ post '/users/:id/tags' do
   @tag = Tag.new(name: params[:name], status: params[:status])
   if @tag.save
     user.tags << @tag
+
+    #ZM: I prefer that we use explicit redirects instead of back. 
+    # '/users/#{user.id}/tags'
+    #
     redirect back
     # "/tags/#{@tag.id}"
   else

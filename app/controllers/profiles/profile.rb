@@ -5,6 +5,7 @@ end
 
 get '/users/:id/profile/new' do
   new_user = params[:id]
+  #ZM: No need to assign params here, just use it directly 
   erb :'profiles/new', locals: {new_user: new_user}
 end
 
@@ -24,6 +25,7 @@ post '/users/:id/profile' do
                               quirk: params[:quirk],
                               user_id: user_id)
   # figure out tags component
+  #ZM:q:  What happens if the user does not save? a: it willl crassshh
   new_profile.save!
   redirect "/users/#{new_profile.id}/tags/new"
 end
