@@ -6,14 +6,23 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Your matches!...or mismatches ^_~</h2>
           </div>
-
-            <div class="row">
-              <% list.each do |username, percent| %>
-                  <% user = User.find_by(username: username) %>
-              <div class="col-md-3 col-md-pull-9"><img class="match-image" src="http://a-z-animals.com/media/animals/images/original/sea_lion10.jpg" alt=""></div>
-              <div class="col-md-9 col-md-push-3"><a href="/users/<%= user.id %>/profile"><%=username%></a>
-                    <%= percent %>% Match</div>
-              <% end %>
-            </div>
         </div>
+
+        <div class="container">
+        <% list.each do |username, percent| %>
+        <% user = User.find_by(username: username) %>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="match-image" src="http://a-z-animals.com/media/animals/images/original/sea_lion10.jpg" alt="">
+          </div>
+          <div class="col-md-8">
+            <p>
+              <a href="/users/<%= user.id %>/profile"><%=username%></a>
+              <%= percent %> % Match
+            </p>
+          </div>
+        </div>
+       <% end %>
+     </div>
     </section>
