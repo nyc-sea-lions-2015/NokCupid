@@ -33,7 +33,7 @@ get '/profiles/:id/edit' do
   erb :'profiles/edit'
 end
 
-put '/profiles/:id' do
+put '/users/:id/profile' do
   profile = Profile.find_by(id: params[:id])
   if profile
     profile.age = params[:age]
@@ -42,7 +42,7 @@ put '/profiles/:id' do
     profile.quirk = params[:quirk]
     profile.tagline = params[:tagline]
     profile.save!
-    redirect "/profiles/#{@edit_profile.id}"
+    redirect "/users/#{params[:id]}/profile"
   else
     [404, "Sorry, this profile has not been found."]
   end
@@ -53,7 +53,7 @@ get '/profiles/:id/delete' do
   erb :'profiles/delete'
 end
 
-delete '/profiles/:id' do
+delete '/users/:id/profile' do
   @profile = Profile.find_by(id: params[:id])
   if @profile
     @profile.destroy
